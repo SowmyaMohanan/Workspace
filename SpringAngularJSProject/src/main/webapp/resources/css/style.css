@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	color : purple;
+	font-size : 20px;
+}
+
+table.studentry tr:last-child td{
+	padding-left:108px;
+}
+
+table, th, td {
+	border: 2px solid grey;
+	border-collapse: collapse;
+	padding: 8px;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+table#studDetails th:last-child {
+	width : 160px;
+}
+
+tr:last-child input, button{
+	border-radius : 12px;
+	padding : 5px;
+	border-style: ridge;
+    color: darkgreen;
+    background-color: cornsilk;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 18px;
+    border-color: bisque;
+/*     box-shadow: 0 3px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.10) */
+}

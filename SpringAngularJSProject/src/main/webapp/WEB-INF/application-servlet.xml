@@ -18,6 +18,8 @@
    <mvc:annotation-driven />
 	<context:annotation-config />
 	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
 	<!-- Add JPA support -->
   <bean id="emf" class=
        "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

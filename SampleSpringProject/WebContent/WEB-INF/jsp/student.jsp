@@ -44,7 +44,7 @@ $(document).ready(function(){
 </head>
 <body>
 <h2>Student Information</h2>
-<form:form id="studentForm" method="POST" action="/SampleSpringProject/addStudent">
+<form:form id="studentForm" method="POST" action="addStudent">
    <table>
     <tr>
         <td><form:label path="name">Name</form:label></td>

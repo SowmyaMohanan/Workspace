@@ -1,4 +1,4 @@
-package com.example;
+package com.example.controller;
 
 import java.util.List;
 
@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.Student;
 import com.example.dao.StudentDao;
 import com.google.gson.Gson;
 
 @Controller
+@RequestMapping(value = "/admin/*")
 public class StudentController {
 	
 	@Autowired
