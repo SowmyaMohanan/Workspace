@@ -12,7 +12,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
 	
 	function fetchAllStudents() {
         var deferred = $q.defer();
-        $http.get('addStudent').then(
+        $http.get('allStudent').then(
             function (response) {
                 deferred.resolve(response.data);
             },
@@ -41,7 +41,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
 	
     function deleteStudent(stud){
     	var deferred = $q.defer();
-        $http.delete('addStudent/'+stud.id).then(
+        $http.delete('deleteStudent/'+stud.id).then(
             function (response) {
                 deferred.resolve(response.data);
             },
@@ -55,7 +55,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
     
     function updateStudent(stud, id){
     	var deferred = $q.defer();
-        $http.put('addStudent/'+id, stud).then(
+        $http.put('modifyStudent/'+id, stud).then(
             function (response) {
                 deferred.resolve(response.data);
             },

@@ -45,7 +45,7 @@ public class StudentController {
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/addStudent", method = RequestMethod.GET)
+	@RequestMapping(value = "/allStudent", method = RequestMethod.GET)
 	public ResponseEntity<List<Student>> fetchStudents(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("Start ---- Inside fetchStudents");
 		List<Student> studs = dao.fetchAll();
@@ -58,7 +58,7 @@ public class StudentController {
 		return new ResponseEntity<List<Student>>(studs, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/addStudent/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/deleteStudent/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Void> deleteStudent(@PathVariable("id") int id) {
 		System.out.println("Start ---- Inside deleteStudent" + id);
 		try{
@@ -73,7 +73,7 @@ public class StudentController {
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/addStudent/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/modifyStudent/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Void> modifyStudent(@PathVariable("id") Integer id ,@RequestBody Student stud) {
 		
 		dao.modifyStudentDetails(stud, id);

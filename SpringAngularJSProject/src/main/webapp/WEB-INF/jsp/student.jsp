@@ -43,7 +43,7 @@
                
                <tr>               
                   <td colspan = "2">
-                     <input type="submit" value="{{!ctrl.note ? 'Add New' : 'Update'}}" ng-click="ctrl.submit()">
+                     <input type=button value="{{!ctrl.note ? 'Add New' : 'Update'}}" ng-click="ctrl.submit()">
                      <input type="reset" ng-click="ctrl.reset()" value = "Reset Details">
                   </td>
                </tr>
