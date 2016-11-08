@@ -11,7 +11,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="stud in view.students">
+				<tr ng-repeat="stud in view.students | orderBy:stud.id">
 					<td>{{stud.name}}</td>
 					<td>{{stud.age}}</td>
 					<td>{{stud.id}}</td>
