@@ -4,14 +4,17 @@ mainApp.config(['$routeProvider', function($routeProvider){
 	$routeProvider.
 		when('/addStudent', {
 			templateUrl : 'addStudent.jsp',
-			controller : 'AddStudentController'
+			controller : 'AddStudentController',
+			controllerAs : 'ctrl'
 		}).
 		when('/viewStudent', {
 			templateUrl : 'viewStudent.jsp',
-			controller : 'ViewStudentController'
+			controller : 'ViewStudentController',
+			controllerAs : 'view'
 		}).
 		when('/modifyStudent', {
 			templateUrl : 'modifyStudent.jsp',
-			controller : 'ModifyStudentController'
+			controller : 'ModifyStudentController',
+			controllerAs : 'modify'
 		});
 }]);

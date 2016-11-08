@@ -1,5 +1,5 @@
 
-<div ng-controller="ViewStudentController as view">
+<div>
 <h2>Student Details</h2>
 <table id="studDetails">
 			<thead>

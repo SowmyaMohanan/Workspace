@@ -1,4 +1,4 @@
-<div ng-controller="AddStudentController as ctrl">
+<div>
 	<form name = "studentForm">
          
             <div class="studentry">

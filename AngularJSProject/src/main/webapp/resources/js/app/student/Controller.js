@@ -15,8 +15,7 @@ mainApp.controller('AddStudentController',[ '$scope','StudentService', function(
 			
 			ctrl.resetDetails=function(){
                 ctrl.student={name:'',age:null,id:null};
-                $scope.studentForm.$setPristine(); //reset Form
-                ctrl.readonly = false;
+                $scope.studentForm.$setPristine(); //reset Form                
             }
 			
 						
@@ -62,12 +61,13 @@ mainApp.controller('ModifyStudentController',[ '$scope','StudentService', functi
 	var ctrl = this;
 	ctrl.student = {name:'',age:null,id:null};
 	
-	handleEvent();			
+	fetchModifyData();			
 			
-		function handleEvent(){
-			ctrl.student.name = StudentService.data.name;
-			ctrl.student.age = StudentService.data.age;
-			ctrl.student.id = StudentService.data.id;
+		function fetchModifyData(){
+			var data = StudentService.getData();
+			ctrl.student.name = data.name;
+			ctrl.student.age = data.age;
+			ctrl.student.id = data.id;
 		}
 		
 		ctrl.updateDetails = function() {

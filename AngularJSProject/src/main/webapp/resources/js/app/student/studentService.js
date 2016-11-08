@@ -1,23 +1,17 @@
 
-mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
+mainApp.service('StudentService', ['$http', '$q' , function($http,$q){
+		
+	var data = [];
 	
-	var factory = {
-	        fetchAllStudents: fetchAllStudents,
-	        createStudent: createStudent,
-	        updateStudent:updateStudent,
-	       deleteStudent:deleteStudent,
-	       setData:setData
-	    };
-	
-	factory.data = [];
-	
-	return factory;
-	
-	function setData(data) {
-		factory.data=data;		
+	this.setData = function (content) {
+		data=content;		
 	}	
 	
-	function fetchAllStudents() {
+	this.getData = function () {
+		return data;		
+	}	
+	
+	this.fetchAllStudents = function () {
         var deferred = $q.defer();
         $http.get('admin/allStudent').then(
             function (response) {
@@ -31,7 +25,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
         return deferred.promise;
     }
  
-    function createStudent(student) {
+    this.createStudent = function (student) {
         var deferred = $q.defer();
         $http.post('admin/addStudent', student)
             .then(
@@ -46,7 +40,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
         return deferred.promise;
     }
 	
-    function deleteStudent(stud){
+    this.deleteStudent = function (stud){
     	var deferred = $q.defer();
         $http.delete('admin/deleteStudent/'+stud.id).then(
             function (response) {
@@ -60,7 +54,7 @@ mainApp.factory('StudentService', ['$http', '$q' , function($http,$q){
         return deferred.promise;
     }
     
-    function updateStudent(stud, id){
+    this.updateStudent = function (stud, id){
     	var deferred = $q.defer();
         $http.put('admin/modifyStudent/'+id, stud).then(
             function (response) {
