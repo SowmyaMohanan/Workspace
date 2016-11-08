@@ -44,7 +44,7 @@ public boolean isStudentExists(Student student) {
 
 @Override
 @Transactional
-public void deleteStudent(int id) throws IllegalArgumentException{
+public void deleteStudent(Long id) throws IllegalArgumentException{
 	Student stud = entityManager.find(Student.class,id);
 	if(null != stud){
 		entityManager.remove(stud);	
@@ -54,7 +54,7 @@ public void deleteStudent(int id) throws IllegalArgumentException{
 
 @Override
 @Transactional
-public void modifyStudentDetails(Student student, Integer id) throws IllegalArgumentException{
+public void modifyStudentDetails(Student student, Long id) throws IllegalArgumentException{
 	entityManager.merge(student);
 	
 }

@@ -14,7 +14,7 @@ public interface StudentDao {
 	
 	public boolean isStudentExists(Student student);
 	
-	public void deleteStudent(int id) throws IllegalArgumentException;
+	public void deleteStudent(Long id) throws IllegalArgumentException;
 	
-	public void modifyStudentDetails(Student student, Integer id) throws IllegalArgumentException;
+	public void modifyStudentDetails(Student student, Long id) throws IllegalArgumentException;
 }
