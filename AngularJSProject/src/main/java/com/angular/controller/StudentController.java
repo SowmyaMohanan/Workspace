@@ -38,7 +38,7 @@ public class StudentController {
 	}
 
 	@RequestMapping(value = "/allStudent", method = RequestMethod.GET)
-	public ResponseEntity<List<Student>> fetchStudents(HttpServletRequest request, HttpServletResponse response) {
+	public ResponseEntity<List<Student>> fetchStudents() {
 		System.out.println("Start ---- Inside fetchStudents");
 		
 		List<Student> studs = dao.fetchAll();
@@ -52,7 +52,7 @@ public class StudentController {
 	}
 	
 	@RequestMapping(value = "/deleteStudent/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<List<Student>> deleteStudent(@PathVariable("id") int id) {
+	public ResponseEntity<List<Student>> deleteStudent(@PathVariable("id") Long id) {
 		System.out.println("Start ---- Inside deleteStudent" + id);
 		List<Student> studs = null;
 		try{
@@ -75,7 +75,7 @@ public class StudentController {
 	}
 	
 	@RequestMapping(value = "/modifyStudent/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<Void> modifyStudent(@PathVariable("id") Integer id ,@RequestBody Student stud) {
+	public ResponseEntity<Void> modifyStudent(@PathVariable("id") Long id ,@RequestBody Student stud) {
 		try{
 			dao.modifyStudentDetails(stud, id);
 		}catch(IllegalArgumentException e){
