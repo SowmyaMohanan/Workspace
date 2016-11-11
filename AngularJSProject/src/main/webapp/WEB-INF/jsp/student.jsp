@@ -14,16 +14,24 @@
 
 <a href="#addStudent">Add Student</a>
 <a href="#viewStudent">View Student</a>
+<a href="#slider">JQuery Slider</a>
 <br>
 <div ng-view></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-<script src="<s:url value='/resources/js/app/app.js' />"></script>
-<script src="<s:url value='/resources/js/app/student/Controller.js' />"></script>
-<script src="<s:url value='/resources/js/app/student/studentService.js' />"></script>
+<%-- <script src="<s:url value='/app/app.js' />"></script>
+<script src="<s:url value='/app/add/AddStudentController.js' />"></script>
+<script src="<s:url value='/app/add/AddStudentService.js' />"></script>
+<script src="<s:url value='/app/modify/ModifyStudentController.js' />"></script>
+<script src="<s:url value='/app/modify/ModifyStudentService.js' />"></script>
+<script src="<s:url value='/app/view/ViewStudentController.js' />"></script>
+<script src="<s:url value='/app/view/ViewStudentService.js' />"></script>
+<script src="<s:url value='/app/slider/SliderController.js' />"></script> --%>
 
+<script src="<s:url value='/app_min.js' />"></script>
 <link rel = "stylesheet" href = "<s:url value='/resources/css/style.css' />">
 
 </body>

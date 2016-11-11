@@ -58,3 +58,10 @@ table#studDetails th:last-child {
 	margin-left: 34px;
     margin-bottom: 8px;
 }
+div .ui-widget-content{
+	width: 600px;
+	background: wheat;
+}
+div .ui-widget .ui-state-default{
+	background: brown;
+}
