@@ -17,8 +17,7 @@ mainApp.controller('AddStudentController',[ '$scope','AddStudentService', functi
                 ctrl.student={name:'',age:null,id:null};
                 $scope.studentForm.$setPristine(); //reset Form                
             }
-			
-						
+									
 }]);
 
 
