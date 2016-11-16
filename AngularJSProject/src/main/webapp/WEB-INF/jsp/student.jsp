@@ -6,7 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link rel = "stylesheet" href = "<s:url value='/resources/css/style.css' />">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body ng-app = "mainApp">
 
@@ -21,6 +22,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <%-- <script src="<s:url value='/app/app.js' />"></script>
 <script src="<s:url value='/app/add/AddStudentController.js' />"></script>
@@ -32,7 +34,7 @@
 <script src="<s:url value='/app/slider/SliderController.js' />"></script> --%>
 
 <script src="<s:url value='/app_min.js' />"></script>
-<link rel = "stylesheet" href = "<s:url value='/resources/css/style.css' />">
+
 
 </body>
 </html>
