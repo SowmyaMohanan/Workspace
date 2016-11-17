@@ -54,15 +54,15 @@ fieldset{
 </form>
 <br><br><br>
 <!-- <div>
-Student Name: {{studname}} <br>
+Student Name: {{m.studname}} <br>
 
-Marks1: {{marks1}} <br>
+Marks1: {{m.marks1}} <br>
 
-Marks2: {{marks2}} <br>
+Marks2: {{m.marks2}} <br>
 
-Marks3: {{marks3}} <br>
+Marks3: {{m.marks3}} <br>
 
-Average: {{ (marks1 + marks2 + marks3 ) / 3 }}
+Average: {{ (m.marks1 + m.marks2 + m.marks3 ) / 3 }}
 </div> -->
 
 <div>
