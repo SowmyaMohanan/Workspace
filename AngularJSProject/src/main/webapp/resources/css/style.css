@@ -65,3 +65,6 @@ div .ui-widget-content{
 div .ui-widget .ui-state-default{
 	background: brown;
 }
+input[type="button"]:disabled {
+    cursor: auto;
+}
