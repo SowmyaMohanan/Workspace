@@ -4,9 +4,6 @@ mainApp.service('MarksService', function(){
 	var serv = this;
 	
 	serv.arr = [];
-	serv.calculateAvg = function(m1, m2, m3){
-		return ((m1+m2+m3)/3);
-	}
 	
 	serv.save = function(data){
 		serv.arr.push({			
@@ -31,10 +28,6 @@ mainApp.controller('MarksController',['$scope', 'MarksService', function($scope,
 	ctrl.avg = null;
 	ctrl.studs = [];
 	
-	ctrl.calculateAvg = function(){
-		ctrl.avg = MarksService.calculateAvg(ctrl.marks1, ctrl.marks2, ctrl.marks3);
-	}
-	
 	ctrl.save = function(form){
 		ctrl.studs = MarksService.save(ctrl);
 		ctrl.studname = '';
@@ -46,5 +39,7 @@ mainApp.controller('MarksController',['$scope', 'MarksService', function($scope,
 	}
 		
 }]);
+
+
 
 
