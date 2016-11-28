@@ -18,7 +18,7 @@
              </div>
 			<div class = "buttons">
                      <input type=button value="Add New" ng-click="ctrl.submitDetails()" 
-                     ng-disabled="studentForm.$pristine || (studentForm.name.$invalid || studentForm.id.$invalid ">
+                     ng-disabled="studentForm.$pristine || (studentForm.name.$invalid || studentForm.id.$invalid) ">
                      <input type="reset" ng-click="ctrl.resetDetails()" value = "Reset Details">
 			</div>
             </div>
