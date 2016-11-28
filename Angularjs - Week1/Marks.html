@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -46,11 +47,6 @@ table, th, td {
 			<input name="marks3" ng-model="m.marks3" type="number" required>
 			<span ng-show="studentForm.marks3.$touched && studentForm.marks3.$invalid">The Mark3 is required.</span>
 		</div>	
-		<!--<div>
-		<input type="button" ng-click="m.calculateAvg()" value="Calculate"
-		ng-disabled="studentForm.$pristine || (studentForm.marks3.$invalid || studentForm.studname.$invalid 
-		|| studentForm.marks1.$invalid || studentForm.marks2.$invalid) ">
-		</div>-->
 		<div>
 		<input type="button" ng-click="m.save(studentForm)" value="Save"
 		ng-disabled="studentForm.$pristine || (studentForm.marks3.$invalid || studentForm.studname.$invalid 
