@@ -5,7 +5,7 @@
   <groupId>SpringBoot</groupId>
   <artifactId>SpringBoot</artifactId>
   <version>0</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <name>SpringBoot</name>
 	
@@ -28,7 +28,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>Example</mainClass>
+					<mainClass>demo.Example</mainClass>
 					<addResources>true</addResources>
 				</configuration>
 			</plugin>
